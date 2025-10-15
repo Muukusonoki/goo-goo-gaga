@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, 
+                   initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Piedra Papel Tijera</title>
+</head>
+<body>
+    
+    <section class="game">
+        <!--Título -->
+        <div class="title">Piedra Papel Tijera</div>
+        
+        <!--Mostrar puntuación del jugador y la computadora -->
+        <div class="score">  
+            <div class="playerScore">
+                <h2>Jugador</h2>
+                <p class="p-count count">0</p>
+            </div>       
+            <div class="computerScore">
+                <h2>Computadora</h2>
+                <p class="c-count count">0</p>
+            </div>
+        </div>
+      
+        <div class="move">Elige tu jugada</div>
+        
+        <!--Número de movimientos restantes antes de que termine el juego -->
+        <div class="movesleft">Movimientos restantes: 10 </div>
+        
+        <!--Opciones disponibles para que el jugador juegue -->
+        <div class="options">
+            <button class="rock">Piedra</button>
+            <button class="paper">Papel</button>
+            <button class="scissor">Tijera</button>    
+        </div>
+        
+        <!--Resultado final del juego -->
+        <div class="result"></div>
+    </section>
+    <video id="video" >
+        <source src="ezwin.mp4" type="video/mp4">
+    </video>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
