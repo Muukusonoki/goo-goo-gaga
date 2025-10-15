@@ -97,23 +97,10 @@ const juego = () => {
         movimientosRestantes.style.display = 'none';
 
         if (puntuacionJugador > puntuacionComputadora) {
+            document.getElementById("video").style.visibility = "visible";
             resultado.style.fontSize = '2rem';
             resultado.innerText = 'ganaste';
             resultado.style.color = '#308D46';
-            video.addEventListener('canplay', () => {
-            document.getElementById("video").style.display = "block"; 
-            if (video.requestFullscreen) {
-                video.requestFullscreen();
-            } else if (video.mozRequestFullScreen) { 
-                video.mozRequestFullScreen();
-            } else if (video.webkitRequestFullscreen) { 
-                video.webkitRequestFullscreen();
-            } else if (video.msRequestFullscreen) {
-                video.msRequestFullscreen();
-            }
-            video.play(); 
-        });
-
         }
         else if (puntuacionJugador < puntuacionComputadora) {
             resultado.style.fontSize = '2rem';
@@ -125,11 +112,6 @@ const juego = () => {
             resultado.innerText = 'Empate';
             resultado.style.color = 'grey';
         }
-        btnReiniciar.innerText = 'Reiniciar';
-        btnReiniciar.style.display = 'flex';
-        btnReiniciar.addEventListener('click', () => {
-            window.location.reload();
-        })
     }
 
     // Llamar a la función jugar dentro de juego
